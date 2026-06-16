@@ -41,6 +41,27 @@ export THREADS_USER_ID="your-threads-user-id"  # 선택: 미설정 시 API로 �
 
 링크는 텍스트 본문에 직접 포함하면 자동 프리뷰가 생성됩니다.
 
+### Infographic visualization (IMAGE / CAROUSEL)
+
+When a thread explains something structural — a process, comparison, architecture, metrics, or a
+topic breakdown — attach it as an **infographic image** instead of cramming it into the 500-char
+text. Threads renders uploaded images natively, so the visual carries the structure at a glance.
+
+- **Plugin-independent standalone images only.** Each infographic must be a self-contained image
+  file (PNG/JPG) served from a public URL. Threads has no diagram/chart embed — never rely on a
+  rendered widget, iframe, or link-preview to draw the visual. Pre-render the graphic to a flat
+  image and pass its public URL via `--image-url` (single) or `--carousel-images` (2–20 images,
+  ideal for a multi-step infographic).
+- **Maximize and diversify types:** mind map (topic breakdown), flowchart (process),
+  architecture/schematic, chart/graph (metrics — Mermaid `xychart-beta`/`pie`), timeline,
+  sequence, webtoon/illustrated panel (problem→solution), and other creative visualizations
+  beyond these types — the list is not exhaustive (journey strip, cards, labeled map, custom
+  infographic, …). In a carousel, vary the type across slides.
+- **Production:** Mermaid → PNG via `mmdc -i d.mmd -o d.png -w 900 --backgroundColor white`;
+  webtoon/custom infographics via any image-gen tool → PNG. Host the file at a public URL (the
+  Threads API requires a publicly fetchable image).
+- Lead the text with the key takeaway and let the infographic carry the detail.
+
 ## 3. 포스트 작성
 
 ### 제약 사항

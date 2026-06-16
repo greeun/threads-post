@@ -1,0 +1,9 @@
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# superpowers (auto-installed; do not track)
+.superpowers/
+docs/superpowers/
