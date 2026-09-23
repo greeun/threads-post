@@ -175,6 +175,8 @@ def main():
             print(f"  Created carousel item: {result['id']}", file=sys.stderr)
         wait_for_media_ready()
         container = create_carousel_container(user_id, text, children_ids, reply_to)
+        # 부모 CAROUSEL 컨테이너도 준비될 때까지 대기 (단일 이미지 경로와 동일)
+        wait_for_media_ready()
     elif args.image_url:
         container = create_image_container(user_id, text, args.image_url, reply_to)
         wait_for_media_ready()

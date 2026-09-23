@@ -6,6 +6,7 @@ description: |
   "쓰레드로 공유", "기술 공유 쓰레드", "홍보 쓰레드", "세션 정리 쓰레드", "교육 콘텐츠 쓰레드",
   "쓰레드 댓글", "쓰레드 답글", "threads reply", "threads comment",
   "threads post", "SNS 게시" 요청 시 사용.
+version: 1.0.0
 ---
 
 # Threads Post Writer

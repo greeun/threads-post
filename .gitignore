@@ -23,3 +23,11 @@ __pycache__/
 *-runs/
 *-output/
 # <<< skill-artifacts
+
+# env files
+.env*
+!.env*.example
+!.env*.template
+
+# local tooling (machine-specific)
+.axt-profile.json*
